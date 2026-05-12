@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | North Star Tutoring</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero hero--compact">
+        <div class="hero__copy">
+          <p class="eyebrow">Admin Backlog</p>
+          <h1>Private booking dashboard.</h1>
+          <p class="hero__text">
+            Sign in to review tutoring requests saved on the server.
+          </p>
+        </div>
+      </header>
+
+      <main class="content-grid content-grid--single">
+        <section class="panel">
+          <div class="panel__heading">
+            <p class="eyebrow">Admin Login</p>
+            <h2>View submitted bookings.</h2>
+          </div>
+
+          <form id="admin-login-form" class="booking-form admin-login-form">
+            <div class="form-group">
+              <label for="admin-password">Admin password</label>
+              <input id="admin-password" name="password" type="password" required />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="button button--primary">Sign In</button>
+              <button id="admin-logout" type="button" class="button button--ghost">Sign Out</button>
+            </div>
+            <p id="admin-status" class="form-status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="panel__heading">
+            <p class="eyebrow">Server Backlog</p>
+            <h2>Bookings only visible to admins.</h2>
+          </div>
+          <div id="admin-booking-list" class="booking-list" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="admin-booking-template">
+      <article class="booking-card">
+        <div class="booking-card__top">
+          <p class="booking-card__id"></p>
+          <p class="booking-card__time"></p>
+        </div>
+        <h3 class="booking-card__name"></h3>
+        <p class="booking-card__meta"></p>
+        <p class="booking-card__detail"></p>
+        <p class="booking-card__address"></p>
+        <p class="booking-card__contact"></p>
+      </article>
+    </template>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

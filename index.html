@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>North Star Tutoring | Booking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <a class="call-bloop" href="tel:6472846166" aria-label="Call us at 647-284-6166">
+        <span class="call-bloop__label">Call us!</span>
+        <span class="call-bloop__number">647-284-6166</span>
+      </a>
+
+      <header class="hero">
+        <div class="hero__copy">
+          <p class="eyebrow">Tutoring Centre Booking</p>
+          <h1>Personalized tutoring starts with one quick booking form.</h1>
+          <p class="hero__text">
+            Share who needs support, what they need help with, and where tutoring should happen.
+            We&apos;ll use the details to line up the right tutor for the job.
+          </p>
+        </div>
+        <div class="hero__card">
+          <p class="hero__card-title">What you can book for</p>
+          <ul class="hero__list">
+            <li>Homework support</li>
+            <li>Exam prep</li>
+            <li>Reading and writing help</li>
+            <li>Math and science coaching</li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="content-grid">
+        <section class="panel panel--form">
+          <div class="panel__heading">
+            <p class="eyebrow">Book A Session</p>
+            <h2>Tell us who needs tutoring.</h2>
+          </div>
+
+          <form id="booking-form" class="booking-form">
+            <fieldset class="form-group">
+              <legend>Who Needs Tutoring?</legend>
+              <div class="choice-grid">
+                <label class="choice-card">
+                  <input type="radio" name="whoNeedsTutoring" value="I do" checked />
+                  <span>I do</span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="whoNeedsTutoring" value="My Child Does" />
+                  <span>My Child Does</span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="whoNeedsTutoring" value="Someone else does" />
+                  <span>Someone else does</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <label for="gradeLevel">What Grade Level is the tutee?</label>
+              <select id="gradeLevel" name="gradeLevel" required>
+                <option value="">Select grade level</option>
+                <option value="Elementary School">Elementary School</option>
+                <option value="Middle School">Middle School</option>
+                <option value="High School">High School</option>
+                <option value="Post-Secondary">Post-Secondary</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="startRange">When would you like to get started?</label>
+              <div class="slider-block">
+                <input
+                  id="startRange"
+                  name="startRange"
+                  type="range"
+                  min="0"
+                  max="4"
+                  step="1"
+                  value="2"
+                  aria-describedby="startRangeValue"
+                />
+                <div class="slider-meta">
+                  <p id="startRangeValue" class="slider-value">In the next 2 to 3 weeks</p>
+                  <input id="startDate" name="startDate" type="date" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Tutoring address</label>
+              <input
+                id="address"
+                name="address"
+                type="text"
+                placeholder="Enter the address for the tutoring location"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="focusArea">What do they need tutoring for?</label>
+              <textarea
+                id="focusArea"
+                name="focusArea"
+                rows="5"
+                placeholder="Tell us the subject, goals, current challenges, or upcoming tests."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="contactName">Contact name</label>
+              <input
+                id="contactName"
+                name="contactName"
+                type="text"
+                placeholder="Who should we follow up with?"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="647-284-6166"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-actions form-actions--single">
+              <button type="submit" class="button button--primary">Send Booking Request</button>
+            </div>
+
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <aside class="sidebar">
+          <section class="panel">
+            <div class="panel__heading">
+              <p class="eyebrow">Meet The Team</p>
+              <h2>Friendly faces, room to customize later.</h2>
+            </div>
+
+            <div class="team-grid">
+              <article class="team-card">
+                <div class="team-card__photo" aria-hidden="true"></div>
+                <h3>Name Here</h3>
+                <p>Credentials go here</p>
+              </article>
+              <article class="team-card">
+                <div class="team-card__photo" aria-hidden="true"></div>
+                <h3>Name Here</h3>
+                <p>Credentials go here</p>
+              </article>
+              <article class="team-card">
+                <div class="team-card__photo" aria-hidden="true"></div>
+                <h3>Name Here</h3>
+                <p>Credentials go here</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel__heading">
+              <p class="eyebrow">Private Booking Storage</p>
+              <h2>Requests are now saved on the server.</h2>
+            </div>
+
+            <div class="info-card">
+              <p>
+                Submitted bookings no longer stay visible on the public page. They are stored in a
+                private server backlog for admins to review.
+              </p>
+              <p>
+                Admin view:
+                <a href="/admin.html">Open the private dashboard</a>
+              </p>
+            </div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "tutoring-centre-booking",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tutoring centre booking site with private admin backlog",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0"
+  }
+}
